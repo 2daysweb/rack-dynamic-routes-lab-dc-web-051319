@@ -14,6 +14,8 @@ if req.path.match(/items/)
       
       item_names = @@items.collect{|item| item.name}
       
+      binding.pry 
+      
       if item_names.include?(item_name) 
       
       resp.write @@items.find{|item| item.name == item_name}.price 
